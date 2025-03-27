@@ -1,0 +1,10 @@
+{
+    "login": "Giriş Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "remove": "Sil",
+    "add": "Ekle",
+    "enter a new task" : "Yeni bir görev girin",
+    "todo list": "Yapılacaklar Listesi",
+    "The provided credentials do not match our records" : "Sağlanan kimlik bilgileri kayıtlarımızla eşleşmiyor"
+}

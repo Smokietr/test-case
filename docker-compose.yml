@@ -1,0 +1,21 @@
+services:
+    backend:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "80:9000"
+        healthcheck:
+            test: ["CMD", "php", "artisan", "octane:status"]
+            interval: 5s
+            retries: 8
+
+    unit-tests:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "80:9000"
+        environment:
+            - APP_ENV=testing
+        command: [ "php", "artisan", "test" ]

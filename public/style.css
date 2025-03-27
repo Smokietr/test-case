@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+    width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+ul li {
+    display: flex;
+    width: 350px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+ul li a {
+    margin-left: auto;
+    color: red;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.todos {
+    cursor: pointer;
+}
+
+.todo span::before {
+    content: "\2610"; /* Boş kutu */
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.todo.active span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo.active span::before {
+    content: "\2713";
+    color: green;
+    font-weight: bold;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.todo:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    overflow: hidden;
+}
+
+li.page-item {
+    display: inline-block;
+    margin: 0 5px;
+    max-width: 30px;
+}
+
+nav[aria-label="Pagination Navigation"] {
+    width: 350px;
+}
+
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+}
