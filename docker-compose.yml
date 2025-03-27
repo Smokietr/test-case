@@ -4,7 +4,7 @@ services:
             context: .
             dockerfile: Dockerfile
         ports:
-            - "80:9000"
+            - "9000:9000"
         healthcheck:
             test: ["CMD", "php", "artisan", "octane:status"]
             interval: 5s
@@ -14,8 +14,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        ports:
-            - "80:9000"
         environment:
             - APP_ENV=testing
-        command: [ "php", "artisan", "test" ]
+        command: ["php", "artisan", "test"]
+        restart: "no"
